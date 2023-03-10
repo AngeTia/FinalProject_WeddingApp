@@ -1,5 +1,17 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# APP WEB : LOGUI ()
+# AUTHOR INFORMATION:
+
+  > `Ivory Coast`
+  > `GOMPOU GBONGUE TIA ANGE`
+  > `tiaange03@gmail.com`
+  > `Open Source Software`
+
+  **Follow Me**
+  > <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">LinkedIn</a>
+  > <a href="https://www.tia-portfolio.com/">Portfolio</a>
+
+# APP WEB : >>WeddingDay<<
+
 # FONCTIONNALITÉS A METTRE EN PLACE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -40,12 +52,21 @@
 
 **Technologies Utilisées** :
 --------------------------
-> `HTML`
-> `CSS`
-> `JS`
-> `ANGULAR`
-> `PHP`
-> `POSTGRESQL`
+
+**FrontEnd**
+
+ > `HTML`
+ > `CSS`
+ > `JS`
+ > `TypeScript`
+ > `ANGULAR`
+
+**BackEnd(API)**
+
+ > `PHP`
+ > `POSTGRESQL`
+ > `SYMFONY`
+   > `EasySymfony Admin`
 
 **Approche technique**
 ----------------------
@@ -67,83 +88,59 @@
 
 1. Recherche de la mairie :
 
-> Demander à l'utilisateur de saisir le nom de la ville ou de la mairie qu'il souhaite rechercher.
+  > Demander à l'utilisateur de saisir le nom de la ville ou de la mairie qu'il souhaite rechercher.
 
-> Vérifier que l'entrée de l'utilisateur est valide et non vide.
+  > Vérifier que l'entrée de l'utilisateur est valide et non vide.
 
-> Utiliser une requête SQL pour interroger la base de données et récupérer toutes les mairies correspondantes.
+  > Utiliser une requête SQL pour interroger la base de données et récupérer toutes les mairies correspondantes.
 
-> Afficher les résultats de la recherche dans une liste sur la page web.
+  > Afficher les résultats de la recherche dans une liste sur la page web.
 
 2. Affichage des informations relatives à la mairie :
 
-> Récupérer l'identifiant unique de la mairie à partir de l'URL de la page.
+  > Récupérer l'identifiant unique de la mairie à partir de l'URL de la page.
 
-> Utiliser une requête SQL pour récupérer toutes les informations relatives à cette mairie dans la base de données.
+  > Utiliser une requête SQL pour récupérer toutes les informations relatives à cette mairie dans la base de données.
 
-> Afficher ces informations sur la page web à l'aide d'un modèle HTML prédéfini.
+  > Afficher ces informations sur la page web à l'aide d'un modèle HTML prédéfini.
 
 3. Réservation d'une date de mariage :
 
-> Afficher un formulaire de réservation pour la mairie sélectionnée.
+  > Afficher un formulaire de réservation pour la mairie sélectionnée.
 
-> Demander à l'utilisateur de saisir les informations nécessaires pour effectuer la réservation, comme la date et l'heure souhaitées et les informations personnelles de l'utilisateur.
+  > Demander à l'utilisateur de saisir les informations nécessaires pour effectuer la réservation, comme la date et l'heure souhaitées et les informations personnelles de l'utilisateur.
 
-> Vérifier que toutes les informations saisies sont valides et non vides.
+  > Vérifier que toutes les informations saisies sont valides et non vides.
 
-> Insérer les informations de réservation dans la base de données PostgreSQL en utilisant une requête SQL.
+  > Insérer les informations de réservation dans la base de données PostgreSQL en utilisant une requête SQL.
 
 4. Paiement de la réservation :
 
-> Afficher un formulaire de paiement pour la réservation sélectionnée.
+  > Afficher un formulaire de paiement pour la réservation sélectionnée.
 
-> Demander à l'utilisateur de saisir les informations de paiement nécessaires, telles que le nom de la carte de crédit et le numéro de carte.
+  > Demander à l'utilisateur de saisir les informations de paiement nécessaires, telles que le nom de la carte de crédit et le numéro de carte.
 
-> Vérifier que toutes les informations saisies sont valides et non vides.
+  > Vérifier que toutes les informations saisies sont valides et non vides.
 
-> Utiliser une API de paiement en ligne, comme `Stripe` ou `PayPal`, pour effectuer le traitement du paiement.
+  > Utiliser une API de paiement en ligne, comme `Stripe` ou `PayPal`, pour effectuer le traitement du paiement.
 
-> Mettre à jour la base de données pour marquer la réservation comme payée.
+  > Mettre à jour la base de données pour marquer la réservation comme payée.
 
 5. Impression du reçu de la réservation :
 
-> Récupérer l'identifiant unique de la réservation à partir de l'URL de la page.
+  > Récupérer l'identifiant unique de la réservation à partir de l'URL de la page.
 
-> Utiliser une requête SQL pour récupérer toutes les informations relatives à cette réservation dans la base de données.
+  > Utiliser une requête SQL pour récupérer toutes les informations relatives à cette réservation dans la base de données.
 
-> Générer un fichier PDF du reçu de la réservation en utilisant une bibliothèque de génération de PDF, comme PDFKit.
+  > Générer un fichier PDF du reçu de la réservation en utilisant une bibliothèque de génération de PDF, comme PDFKit.
 
-> Afficher le fichier PDF sur la page web pour que l'utilisateur puisse l'imprimer ou le télécharger.
+  > Afficher le fichier PDF sur la page web pour que l'utilisateur puisse l'imprimer ou le télécharger.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **structuration des dossiers pour votre projet**
 ------------------------------------------------
 
-Le tout sera structuré dans le framework `Angular` comme suite : 
+**FrontEnd**
 
-> Le dossier `public` contiendra tous les fichiers publics de votre application, tels que les fichiers `HTML, CSS et JavaScript, ainsi que les images et autres fichiers statiques.`
-
-> Le dossier `src` contiendra tous les fichiers sources de votre application, tels que les fichiers PHP, les fichiers de configuration et les fichiers de routage.
-
-> Le dossier `database` contiendra tous les fichiers nécessaires à la création et à la gestion de la base de données `PostgreSQL`, tels que les scripts SQL pour la création des tables et des index.
-
-> Le dossier `models` contiendra toutes les classes PHP qui modélisent les entités de votre application, telles que les mairies, les réservations et les paiements.
-
-> Le dossier `controllers` contiendra toutes les classes PHP qui traitent les demandes HTTP et effectuent les opérations de base de données nécessaires pour récupérer, créer, mettre à jour et supprimer des entités.
-
-> Le dossier `views` contiendra toutes les vues de votre application, telles que les modèles HTML qui affichent les informations récupérées à partir de la base de données.
-
-> Le dossier `services` contiendra toutes les `classes Angular` qui communiquent avec le `backend` de votre application pour récupérer et envoyer des données, telles que les informations de réservation et de paiement.
-
-> Le dossier `components` contiendra toutes les composantes `Angular` qui peuvent être réutilisées dans différentes parties de votre application, telles que les formulaires de réservation et de paiement.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# DOCUMENT POUR MON PROJET |
-----------------------------
-
-Mettre en place un système qui répartis le pourcentage en fonction des payements de reçu: Une somme à la marie et pourcentage dans le compte du développeur de l'application (Moi), pour mieux monétiser mon application je récupère 10% sur chaque réservation.
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-commande de pièce(Extrait de naissance, Acte de décès, permis d'inhumer etc...) en ligne avec achat de timbre et reçu a imprimé plus une date de retrait du document !
+**Backend**
