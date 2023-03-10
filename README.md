@@ -1,14 +1,15 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # AUTHOR INFORMATION:
 
-  > `Ivory Coast`
-  > `GOMPOU GBONGUE TIA ANGE`
-  > `tiaange03@gmail.com`
-  > `Open Source Software`
+  > `Ivory Coast`<br/>
+  > `GOMPOU GBONGUE TIA ANGE`<br/>
+  > `tiaange03@gmail.com`<br/>
+  > `Open Source Software`<br/>
   > <a href="https://www.tia-portfolio.com/">Portfolio</a>
 
   **Follow Me**
-  > <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">LinkedIn</a>
+  > <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">LinkedIn</a><br/>
+  > <a href="https://twitter.com/AngeTia03">Twitter</a>
 
 # APP WEB : >>WeddingDay<<
 
