@@ -154,9 +154,24 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**structuration des dossiers dans mon projet**
+**Tâches**
 ------------------------------------------------
+
+**Backend**
+
+ > Structure des dossiers `OK`
+ > Base de données `OK`
+ > Connexion de l'API à la base de données `OK`
+ > Mise en place du CRUD `OK`
+ > Dashboard Administrator API `OK`
+ > Mise en place d'un test avec PhpUnit
+ > Amélioration de la sécurité des données
 
 **FrontEnd**
 
-**Backend**
+ > Structure des dossiers `OK`
+ > Configurations des composants
+ > Configurations des différentes pages
+ > Configurations du models
+ > Configurations des services
+ > etc ...
