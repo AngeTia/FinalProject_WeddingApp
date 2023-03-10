@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="container">
+            <h1>Recherche de mariage</h1>
+                <form (ngSubmit)="onSubmit()" #mairieForm="ngForm">
+                  <div class="form-row">
+                    <div class="form-group form-row col-md-12">
+                      <label for="nom">Nom de la ville/mairie :</label>
+                      <input type="text" class="form-control" id="nom" [(ngModel)]="nom" name="nom" required>
+                      <label for="nom">Entrez le mois:</label>
+                      <input type="text" class="form-control" id="mois" [(ngModel)]="mois" name="mois" required>
+                    </div>
+                </div>
+                  <div class="form-row">
+                    <div class="col-md-12">
+                      <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/info">Rechercher</button>
+                      <button type="reset" class="btn btn-secondary">Effacer</button>
+                    </div>
+                </div>
+                </form>
+        </div>
+        <!-- <footer class="bg-light text-center text-white footerContainer">
+            <div class="text-center p-3" style="background-color: rgba(3, 3, 3, 0.2);">
+                © 2023 Copyright:
+                <a class="text-white" href="https://www.tia-portfolio.com">M. ANGE TIA</a>
+            </div>
+
+        </footer> -->
+    </body>
+</html>

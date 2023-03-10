@@ -1,0 +1,32 @@
+.navbar-brand {
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 15px;
+}
+
+.nav-link {
+  color: #6c757d;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-right: 2rem;
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #494e53;
+  color: #fff;
+}
+
+a {
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+}
+
+.active {
+  color: #9c5215;
+  font-weight: 600;
+}
