@@ -5,10 +5,10 @@
   > `GOMPOU GBONGUE TIA ANGE`
   > `tiaange03@gmail.com`
   > `Open Source Software`
+  > <a href="https://www.tia-portfolio.com/">Portfolio</a>
 
   **Follow Me**
   > <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">LinkedIn</a>
-  > <a href="https://www.tia-portfolio.com/">Portfolio</a>
 
 # APP WEB : >>WeddingDay<<
 
