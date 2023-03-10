@@ -5,7 +5,7 @@
   > `GOMPOU GBONGUE TIA ANGE`<br/>
   > `tiaange03@gmail.com`<br/>
   > `Open Source Software`<br/>
-  > <a href="https://www.tia-portfolio.com/">Portfolio</a>
+  > <a href="https://www.tia-portfolio.com/">Personnal Portfolio</a>
 
   **Follow Me**
   > <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">LinkedIn</a><br/>
