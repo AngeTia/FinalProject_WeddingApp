@@ -8,8 +8,12 @@
   > <a href="https://www.tia-portfolio.com/">Personnal Portfolio</a>
 
   **Follow Me**
-  > <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">LinkedIn</a><br/>
-  > <a href="https://twitter.com/AngeTia03">Twitter</a>
+     <div id="badges" align="center">
+        <a href="https://www.linkedin.com/in/gompou-tia-gbongu%C3%A9-ange-9713b5164/">
+            <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/></a>
+        <a href="https://twitter.com/AngeTia03">
+            <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/></a>
+    </div>
 
 # APP WEB : >>WeddingDay<<
 
@@ -56,16 +60,21 @@
 
 **FrontEnd**
 
- > `HTML`
- > `CSS`
- > `JS`
- > `TypeScript`
- > `ANGULAR`
+<div align="center">
+    <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="50" height="50"/> </a>
+    <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="50" height="50"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="50" height="50"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="50" height="50"/>&nbsp;
+    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="50" height="50"/> </a>
+    <a href="https://angular.io/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" alt="Angular" width="50" height="50"/> </a>
+</div>
 
 **BackEnd(API)**
+<div align="center">
+    <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="50" height="50"/> </a>
+    <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/> </a>
+</div>
 
- > `PHP`
- > `POSTGRESQL`
  > `SYMFONY`
    > `EasySymfony Admin`
 
