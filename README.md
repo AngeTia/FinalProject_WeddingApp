@@ -4,7 +4,6 @@
   > `Ivory Coast`<br/>
   > `GOMPOU GBONGUE TIA ANGE`<br/>
   > `tiaange03@gmail.com`<br/>
-  > `Open Source Software`<br/>
   > <a href="https://www.tia-portfolio.com/">Personnal Portfolio</a>
 
   **Follow Me**
@@ -159,19 +158,24 @@
 
 **Backend**
 
- > Structure des dossiers `OK`
- > Base de données `OK`
- > Connexion de l'API à la base de données `OK`
- > Mise en place du CRUD `OK`
- > Dashboard Administrator API `OK`
- > Mise en place d'un test avec PhpUnit
- > Amélioration de la sécurité des données
+ > Structure des dossiers `OK`<br/>
+ > Base de données `OK`<br/>
+ > Connexion de l'API à la base de données `OK`<br/>
+ > Mise en place du CRUD `OK`<br/>
+ > Dashboard Administrator API `OK`<br/>
+ > Mise en place d'un test avec PhpUnit<br/>
+ > Amélioration de la sécurité des données<br/>
 
 **FrontEnd**
 
- > Structure des dossiers `OK`
- > Configurations des composants
- > Configurations des différentes pages
- > Configurations du models
- > Configurations des services
+ > Structure des dossiers `OK`<br/>
+ > Configurations des composants<br/>
+ > Configurations des différentes pages<br/>
+ > Configurations du models<br/>
+ > Configurations des services<br/>
  > etc ...
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+**WorkFlow**
+
+> CodeQL Setup
