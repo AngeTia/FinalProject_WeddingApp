@@ -4,7 +4,6 @@
   > `Ivory Coast`<br/>
   > `GOMPOU GBONGUE TIA ANGE`<br/>
   > `tiaange03@gmail.com`<br/>
-  > `Open Source Software`<br/>
   > <a href="https://www.tia-portfolio.com/">Personnal Portfolio</a>
 
   **Follow Me**
