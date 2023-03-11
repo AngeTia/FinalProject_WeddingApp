@@ -4,7 +4,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  font-size: 100%;
   margin: 0;
   padding: 0;
 }
@@ -17,12 +17,19 @@ section {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 20px;
   color: white;
 }
 
 p {
-  font-size: 24px;
+  color: black;
+  font-size: 30px;
   margin-bottom: 30px;
+}
+
+form {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  color: white;
 }

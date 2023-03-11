@@ -1,4 +1,5 @@
-        <div class="container">
+
+        <div>
             <h1>Vérification du suivis de la réservation</h1>
                 <form (ngSubmit)="onSubmit()" #mairieForm="ngForm">
                   <div class="form-row">
@@ -9,8 +10,12 @@
                 </div>
                   <div class="form-row">
                     <div class="col-md-12">
-                      <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/info">Rechercher</button>
-                      <button type="reset" class="btn btn-secondary">Effacer</button>
+                      <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/info">
+                        <i class="fas fa-search"></i>
+                      </button>
+                      <button type="reset" class="btn btn-secondary">
+                        <i class="fas fa-trash"></i>
+                      </button>
                     </div>
                 </div>
                 </form>
