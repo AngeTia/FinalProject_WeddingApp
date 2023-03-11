@@ -20,6 +20,7 @@ import { ReclamationComponent } from './pages/user/reclamation/reclamation.compo
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactComponent } from './pages/user/contact/contact.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ContactComponent } from './pages/user/contact/contact.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
