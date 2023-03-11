@@ -16,7 +16,7 @@ class UsersController extends AbstractController
 {
     // Route pour récupérer tous les Users
     #[Route('/api/users', name: 'allUsers', methods: ['GET'])]
-    public function getAllMairies(UsersRepository $usersRepository, SerializerInterface $serializer): JsonResponse
+    public function getAllUser(UsersRepository $usersRepository, SerializerInterface $serializer): JsonResponse
     {
         $users = $usersRepository->findAll();
         
@@ -36,19 +36,19 @@ class UsersController extends AbstractController
 
     // Route pour ajouter un user
     #[Route('/api/users/create', name: 'addUsers', methods: ['POST'])]
-    public function addMairie(Request $request, EntityManagerInterface $add, SerializerInterface $serializer): JsonResponse
+    public function addUser(Request $request, EntityManagerInterface $add, SerializerInterface $serializer): JsonResponse
     {
         $users = $serializer->deserialize($request->getContent(), Users::class, 'json');
         $add->persist($users);
         $add->flush();
         
-        $jsonMairie = $serializer->serialize($users, 'json');
-        return new JsonResponse($jsonMairie, Response::HTTP_CREATED, [], true);
+        $jsonUser = $serializer->serialize($users, 'json');
+        return new JsonResponse($jsonUser, Response::HTTP_CREATED, [], true);
     }
     
     // Route pour modifier un user par son id
     #[Route('/api/users/update/{id}', name: 'updateUsers', methods: ['PUT'])]
-    public function updateMairie(Users $users, Request $request, EntityManagerInterface $update, SerializerInterface $serializer): JsonResponse
+    public function updateUser(Users $users, Request $request, EntityManagerInterface $update, SerializerInterface $serializer): JsonResponse
     {
         $users = $serializer->deserialize($request->getContent(), Users::class, 'json', ['object_to_populate' => $users]);
         $update->persist($users);
