@@ -8,8 +8,10 @@ import { RecuComponent } from './pages/user/recu/recu.component';
 import { ReservationComponent } from './pages/user/reservation/reservation.component';
 import { VerificationComponent } from './pages/user/verification/verification.component';
 import { ReclamationComponent } from './pages/user/reclamation/reclamation.component';
+import { ContactComponent } from './pages/user/contact/contact.component';
 
 const routes: Routes = [
+  { path: 'contact', component: ContactComponent },
   { path: 'accueil', component: AccueilComponent },
   { path: 'recherche', component: RechercheMairieComponent },
   { path: 'info', component: InfoMairieComponent },

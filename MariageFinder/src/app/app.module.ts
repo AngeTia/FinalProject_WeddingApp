@@ -19,6 +19,7 @@ import { VerificationComponent } from './pages/user/verification/verification.co
 import { ReclamationComponent } from './pages/user/reclamation/reclamation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ContactComponent } from './pages/user/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     DeconnexionComponent,
     VerificationComponent,
     ReclamationComponent,
-    NavbarComponent
+    NavbarComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <body>
         <div class="container">
             <h1>Recherche de mariage</h1>
                 <form (ngSubmit)="onSubmit()" #mairieForm="ngForm">
                   <div class="form-row">
                     <div class="form-group form-row col-md-12">
                       <label for="nom">Nom de la ville/mairie :</label>
-                      <input type="text" class="form-control" id="nom" [(ngModel)]="nom" name="nom" required>
+                      <select type="text" class="form-control" id="nom" [(ngModel)]="nom" name="nom" required>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                        <option value="6">Six</option>
+                        <option value="7">Seven</option>
+                        <option value="8">Eight</option>
+                        <option value="9">Nine</option>
+                        <option value="10">Ten</option>
+                      </select>
                       <label for="nom">Entrez le mois:</label>
-                      <input type="text" class="form-control" id="mois" [(ngModel)]="mois" name="mois" required>
+                      <select class="form-control" id="mois" [(ngModel)]="mois" name="mois" required>
+                        <option value="Janvier">Janvier</option>
+                        <option value="Février">Février</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Avril">Avril</option>
+                        <option value="Mai">Mai</option>
+                        <option value="Juin">Juin</option>
+                        <option value="Juillet">Juillet</option>
+                        <option value="Août">Août</option>
+                        <option value="Septembre">Septembre</option>
+                        <option value="Octobre">Octobre</option>
+                        <option value="Novembre">Novembre</option>
+                        <option value="Décembre">Décembre</option>
+                      </select>
                     </div>
                 </div>
                   <div class="form-row">
@@ -20,12 +41,4 @@
                 </div>
                 </form>
         </div>
-        <!-- <footer class="bg-light text-center text-white footerContainer">
-            <div class="text-center p-3" style="background-color: rgba(3, 3, 3, 0.2);">
-                © 2023 Copyright:
-                <a class="text-white" href="https://www.tia-portfolio.com">M. ANGE TIA</a>
-            </div>
 
-        </footer> -->
-    </body>
-</html>
