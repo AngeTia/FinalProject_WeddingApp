@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Mairie } from 'src/app/models/mairie.models';
 import { MairieService } from 'src/app/services/mairie.service';
 
-
 @Component({
   selector: 'app-recherche-mairie',
   templateUrl: './recherche-mairie.component.html',
@@ -17,16 +16,14 @@ export class RechercheMairieComponent implements OnInit {
 
   ngOnInit(): void {
     this.nom = '';
-    this.mois;
     this.mairies = [];
   }
 
   onSubmit(): void {
-    this.mairieService.getByName(this.nom)
-      .subscribe((mairies: Mairie[]) => {
-        this.mairies = mairies;
-      });
-      this.mairieService.getByName(this.mois)
+  }
+
+  getAllMairies(): void {
+    this.mairieService.getAll()
       .subscribe((mairies: Mairie[]) => {
         this.mairies = mairies;
       });

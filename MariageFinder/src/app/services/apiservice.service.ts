@@ -8,7 +8,7 @@ import { HttpHeaders } from "@angular/common/http";
 })
 export class HttpService {
 
-  server: string = "http://localhost:3000";
+  server: string = "http://localhost:8000/api/";
   constructor(private http : HttpClient) {
 
   }
