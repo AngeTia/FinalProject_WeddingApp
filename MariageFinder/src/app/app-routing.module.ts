@@ -21,6 +21,8 @@ const routes: Routes = [
   { path: 'verification', component: VerificationComponent },
   { path: 'reclamation', component: ReclamationComponent},
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
+
+
 ];
 
 

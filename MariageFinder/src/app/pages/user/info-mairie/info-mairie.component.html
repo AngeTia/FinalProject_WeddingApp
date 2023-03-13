@@ -1,1 +1,27 @@
-<p>info-mairie works!</p>
+<div class = "row">
+  <h2> Reservation List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+  <thead>
+      <tr>
+          <th> Nom</th>
+          <th> Addresse </th>
+          <th> Phone</th>
+          <th> Email </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let mairie of mairie" >
+          <td> {{ mairie.nom }} </td>
+          <td> {{ mairie.addresse }} </td>
+          <td> {{ mairie.phone }} </td>
+          <td> {{ mairie.email }} </td>
+          <td>
+              <button (click) = "updateMairie(mairie.id)" class = "btn btn-primary"> Update</button>
+              <button (click) = "deleteMairie(mairie.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+              <button (click) = "mairieDetails(mairie.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+          </td>
+      </tr>
+  </tbody>
+</table>

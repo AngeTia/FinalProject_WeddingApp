@@ -1,0 +1,18 @@
+2023/03/13-22:05:45.251 191f Creating DB /home/malack/DevLabs/DI_BOOTCAMP/ProjetFinal/MariageFinder/"/tmp/chrome_tmp"/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2023/03/13-22:05:45.259 191f Reusing MANIFEST /home/malack/DevLabs/DI_BOOTCAMP/ProjetFinal/MariageFinder/"/tmp/chrome_tmp"/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/03/13-22:05:45.303 420d Level-0 table #5: started
+2023/03/13-22:05:45.309 420d Level-0 table #5: 7376 bytes OK
+2023/03/13-22:05:45.315 420d Delete type=0 #3
+2023/03/13-22:05:45.316 420d Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/03/13-22:07:53.118 4138 Level-0 table #7: started
+2023/03/13-22:07:53.126 4138 Level-0 table #7: 71863 bytes OK
+2023/03/13-22:07:53.131 4138 Delete type=0 #4
+2023/03/13-22:07:53.131 4138 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2023/03/13-22:07:53.131 4138 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x07\x01\x02\x01\x08\x00i\x00s\x00C\x00a\x00n\x00a\x00r\x00y' @ 4644 : 1
+2023/03/13-22:07:53.131 4138 Compacting 1@1 + 1@2 files
+2023/03/13-22:07:53.137 4138 Generated table #8@1: 1257 keys, 31390 bytes
+2023/03/13-22:07:53.137 4138 Compacted 1@1 + 1@2 files => 31390 bytes
+2023/03/13-22:07:53.141 4138 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/03/13-22:07:53.141 4138 Delete type=2 #5
+2023/03/13-22:07:53.141 4138 Delete type=2 #7
+2023/03/13-22:07:53.141 4138 Manual compaction at level-1 from '\x00\x07\x01\x02\x01\x08\x00i\x00s\x00C\x00a\x00n\x00a\x00r\x00y' @ 4644 : 1 .. (end); will stop at (end)

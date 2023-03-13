@@ -23,7 +23,7 @@ export class RechercheMairieComponent implements OnInit {
   }
 
   getAllMairies(): void {
-    this.mairieService.getAll()
+    this.mairieService.getMairieList()
       .subscribe((mairies: Mairie[]) => {
         this.mairies = mairies;
       });

@@ -18,10 +18,5 @@ export class VerificationComponent implements OnInit {
     this.mairies = [];
   }
 
-  onSubmit(): void {
-      this.mairieService.getByName(this.identifiant)
-      .subscribe((mairies: Mairie[]) => {
-        this.mairies = mairies;
-      });
-  }
+  onSubmit(): void {}
 }
