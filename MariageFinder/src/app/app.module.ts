@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RechercheMairieComponent } from './pages/user/recherche-mairie/recherche-mairie.component';
 import { InfoMairieComponent } from './pages/user/info-mairie/info-mairie.component';
-import { ReservationComponent } from './pages/user/reservation/reservation.component';
+import { ReservationComponent } from './pages/admin/reservation/reservation.component';
 import { PaiementComponent } from './pages/user/paiement/paiement.component';
 import { RecuComponent } from './pages/user/recu/recu.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -39,7 +39,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     VerificationComponent,
     ReclamationComponent,
     NavbarComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

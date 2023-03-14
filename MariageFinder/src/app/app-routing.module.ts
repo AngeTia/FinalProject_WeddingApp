@@ -5,7 +5,7 @@ import { InfoMairieComponent } from './pages/user/info-mairie/info-mairie.compon
 import { PaiementComponent } from './pages/user/paiement/paiement.component';
 import { RechercheMairieComponent } from './pages/user/recherche-mairie/recherche-mairie.component';
 import { RecuComponent } from './pages/user/recu/recu.component';
-import { ReservationComponent } from './pages/user/reservation/reservation.component';
+import { ReservationComponent } from './pages/admin/reservation/reservation.component';
 import { VerificationComponent } from './pages/user/verification/verification.component';
 import { ReclamationComponent } from './pages/user/reclamation/reclamation.component';
 import { ContactComponent } from './pages/user/contact/contact.component';
