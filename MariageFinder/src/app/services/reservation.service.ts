@@ -18,18 +18,22 @@ export class ReservationService {
   }
 
   createReservation(reservation: Reservation): Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}`, reservation);
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.httpClient.post(`${this.baseURL}`, reservation, {headers});
   }
 
   getEmployeeById(id: number): Observable<Reservation>{
-    return this.httpClient.get<Reservation>(`${this.baseURL}/${id}`);
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.httpClient.get<Reservation>(`${this.baseURL}/${id}`, {headers});
   }
 
   updateReservation(id: number, reservation: Reservation): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/${id}`, reservation);
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.httpClient.put(`${this.baseURL}/${id}`, reservation, {headers});
   }
 
   deleteReservation(id: number): Observable<Object>{
-    return this.httpClient.delete(`${this.baseURL}/${id}`);
+    const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.httpClient.delete(`${this.baseURL}/${id}`, {headers});
   }
 }
