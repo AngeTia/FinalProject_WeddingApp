@@ -3,11 +3,12 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Mairie;
-use App\Entity\Users;
 use App\Entity\Folder;
 use App\Entity\Planning;
-use App\Entity\Reservation;
 use App\Entity\CheckFolder;
+use App\Entity\Reservation;
+use App\Entity\Utilisateur;
+
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -43,12 +44,12 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToRoute('Retour au site', 'fas fa-home', "home");
+
         yield MenuItem::linkToCrud('Mairie', 'fas fa-list', Mairie::class);
-        yield MenuItem::linkToCrud('Users', 'fas fa-list', Users::class);
+        yield MenuItem::linkToCrud('Reservation', 'fas fa-list', Reservation::class);
+        yield MenuItem::linkToCrud('Utilisateur', 'fas fa-list', Utilisateur::class);
         yield MenuItem::linkToCrud('Folder', 'fas fa-list', Folder::class);
         yield MenuItem::linkToCrud('Planning', 'fas fa-list', Planning::class);
-        yield MenuItem::linkToCrud('Reservation', 'fas fa-list', Reservation::class);
         yield MenuItem::linkToCrud('CheckFolder', 'fas fa-list', CheckFolder::class);
         
     }
