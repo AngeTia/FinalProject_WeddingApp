@@ -45,9 +45,6 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $prenom = null;
 
-    #[ORM\ManyToOne(inversedBy: 'Utilisateur')]
-    private ?Mairie $mairie = null;
-
     #[ORM\Column(options: ["default" => false ] )]
     private ?bool $isActive = false;
 
@@ -204,18 +201,6 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPrenom(?string $prenom): self
     {
         $this->prenom = $prenom;
-
-        return $this;
-    }
-
-    public function getMairie(): ?Mairie
-    {
-        return $this->mairie;
-    }
-
-    public function setMairie(?Mairie $mairie): self
-    {
-        $this->mairie = $mairie;
 
         return $this;
     }

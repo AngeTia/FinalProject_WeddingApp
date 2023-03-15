@@ -40,7 +40,7 @@ class Mairie
     {
         $this->Planning = new ArrayCollection();
         $this->Reservation = new ArrayCollection();
-        $this->Utilisateur = new ArrayCollection();
+        // $this->Utilisateur = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -156,34 +156,34 @@ class Mairie
         return $this;
     }
 
-    /**
-     * @return Collection<int, Utilisateur>
-     */
-    public function getUsers(): Collection
-    {
-        return $this->Utilisateur;
-    }
+    // /**
+    //  * @return Collection<int, Utilisateur>
+    //  */
+    // public function getUsers(): Collection
+    // {
+    //     return $this->Utilisateur;
+    // }
 
-    public function addUser(Utilisateur $user): self
-    {
-        if (!$this->Utilisateur->contains($user)) {
-            $this->Utilisateur->add($user);
-            $user->setMairie($this);
-        }
+    // public function addUser(Utilisateur $user): self
+    // {
+    //     if (!$this->Utilisateur->contains($user)) {
+    //         $this->Utilisateur->add($user);
+    //         $user->setMairie($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeUser(Utilisateur $user): self
-    {
-        if ($this->Utilisateur->removeElement($user)) {
-            // set the owning side to null (unless already changed)
-            if ($user->getMairie() === $this) {
-                $user->setMairie(null);
-            }
-        }
+    // public function removeUser(Utilisateur $user): self
+    // {
+    //     if ($this->Utilisateur->removeElement($user)) {
+    //         // set the owning side to null (unless already changed)
+    //         if ($user->getMairie() === $this) {
+    //             $user->setMairie(null);
+    //         }
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
 }
