@@ -1,0 +1,49 @@
+<main>
+  <h2>Nouveau compte </h2>
+<!-- content -->
+<div class="register-area">
+    <div class="container">
+
+        <div class="col-md-12">
+            <div class="box-for overflow">
+                <div class="col-md-12 col-xs-12 register-blocks">
+                    <form [formGroup]="formRegister" #ngForm="ngForm" (ngSubmit)="submitForm()">
+                        <!-- fields nom et prenom -->
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="nom">Nom </label>
+                                    <input formControlName="nom" type="text" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="prenom">Prenom</label>
+                                    <input formControlName="prenom" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-group">
+                                  <label for="contact">Email</label>
+                                  <input formControlName="prenom" type="text" class="form-control" required>
+                              </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="contact">Contact</label>
+                                <input formControlName="prenom" type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        </div>
+                        <br>
+
+                        <div class="col-sm-12 text-center">
+                            <button class="btn btn-primary" routerLink="/recu"> Enregistrer </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>

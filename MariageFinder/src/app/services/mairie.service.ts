@@ -20,7 +20,7 @@ export class MairieService {
 
   createMairie(mairie: Mairie): Observable<Object>{
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
-    return this.httpClient.post(`${this.baseURL}`, mairie);
+    return this.httpClient.post(`${this.baseURL}/create`, mairie);
   }
 
   getMairieById(id: number): Observable<Mairie>{
@@ -29,8 +29,8 @@ export class MairieService {
   }
 
   updateMairie(id: number, mairie: Mairie): Observable<Object>{
-    return this.httpClient.put(`${this.baseURL}/${id}`, mairie);
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
+    return this.httpClient.put(`${this.baseURL}/update`, mairie, {headers});
   }
 
   deleteMairie(id: number): Observable<Object>{
