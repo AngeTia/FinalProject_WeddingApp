@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactComponent } from './pages/user/contact/contact.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { EnregistrerComponent } from './pages/user/enregistrer/enregistrer.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     ReclamationComponent,
     NavbarComponent,
     ContactComponent,
+    EnregistrerComponent,
   ],
   imports: [
     BrowserModule,

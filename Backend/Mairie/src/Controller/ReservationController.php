@@ -40,7 +40,6 @@ class ReservationController extends AbstractController
         $Reservations = $serializer->deserialize($request->getContent(), Reservations::class, 'json');
         $add->persist($Reservations);
         $add->flush();
-        
         $jsonReservation = $serializer->serialize($Reservations, 'json');
         return new JsonResponse($jsonReservation, Response::HTTP_CREATED, [], true);
     }

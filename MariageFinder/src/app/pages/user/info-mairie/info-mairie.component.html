@@ -1,6 +1,5 @@
-<div class = "row">
-  <h2> Reservation List</h2>
-</div>
+
+  <h2> Liste des mairies</h2>
 
 <table class = "table table-striped table-bordered">
   <thead>
@@ -17,11 +16,10 @@
           <td> {{ mairie.addresse }} </td>
           <td> {{ mairie.phone }} </td>
           <td> {{ mairie.email }} </td>
-          <!-- <td>
-              <button (click) = "updateMairie(mairie.id)" class = "btn btn-primary"> Update</button>
-              <button (click) = "deleteMairie(mairie.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-              <button (click) = "mairieDetails(mairie.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
-          </td> -->
+          <td>
+              <button class = "btn btn-primary" style="margin-left: 10px" routerLink="/enregistrer"> Enregistrer Vous!</button>
+          </td>
+
       </tr>
   </tbody>
 </table>

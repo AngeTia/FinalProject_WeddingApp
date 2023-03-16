@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Reservation } from '../../../models/reservation.models';
-import { Router } from '@angular/router';
 import { ReservationService } from 'src/app/services/reservation.service';
 
 @Component({
@@ -8,35 +7,37 @@ import { ReservationService } from 'src/app/services/reservation.service';
   templateUrl: './reservation.component.html',
   styleUrls: ['./reservation.component.scss']
 })
-export class ReservationComponent implements OnInit  {
+export class ReservationComponent implements OnInit {
 
   reservations!: Reservation[];
 
-  constructor(private reservationService: ReservationService,
-    private router: Router) { }
+  constructor(private reservationService: ReservationService) { }
 
   ngOnInit(): void {
     this.getReservation();
   }
 
-  private getReservation(){
+  private getReservation(): void {
     this.reservationService.getReservationList().subscribe(data => {
-      this.reservations= data;
+      this.reservations = data;
     });
   }
 
-  reservationDetails(id: number){
-    this.router.navigate(['ReservationId', id]);
-  }
-
-  updateReservation(id: number){
-    this.router.navigate(['updateReservation', id]);
-  }
-
-  deleteReservation(id: number){
-    this.reservationService.deleteReservation(id).subscribe( data => {
-      console.log(data);
+  reservationDetails(id: number): void {
+    this.reservationService.getReservationById(id).subscribe(() => {
       this.getReservation();
-    })
+    });
+  }
+
+  updateReservation(id: number): void {
+    this.reservationService.updateReservation(id).subscribe(() => {
+      this.getReservation();
+    });
+  }
+
+  deleteReservation(id: number): void {
+    this.reservationService.deleteReservation(id).subscribe(() => {
+      this.getReservation();
+    });
   }
 }

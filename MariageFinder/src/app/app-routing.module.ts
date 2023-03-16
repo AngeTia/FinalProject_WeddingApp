@@ -9,6 +9,7 @@ import { ReservationComponent } from './pages/admin/reservation/reservation.comp
 import { VerificationComponent } from './pages/user/verification/verification.component';
 import { ReclamationComponent } from './pages/user/reclamation/reclamation.component';
 import { ContactComponent } from './pages/user/contact/contact.component';
+import { EnregistrerComponent } from './pages/user/enregistrer/enregistrer.component';
 
 const routes: Routes = [
   { path: 'contact', component: ContactComponent },
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: 'recu', component: RecuComponent },
   { path: 'verification', component: VerificationComponent },
   { path: 'reclamation', component: ReclamationComponent},
+  { path: 'enregistrer', component: EnregistrerComponent},
+  { path: 'recu', component: RecuComponent},
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
 
 

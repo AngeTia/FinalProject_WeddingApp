@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ReservationService {
 
-  private readonly baseURL: string = "http://localhost:8000/api/reservation";
+  baseURL = "http://localhost:8000/api/reservation";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,23 +17,23 @@ export class ReservationService {
     return this.httpClient.get<Reservation[]>(this.baseURL, {headers});
   }
 
-  createReservation(reservation: Reservation): Observable<Object>{
+  createReservation(reservationData: any) {
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
-    return this.httpClient.post(`${this.baseURL}`, reservation, {headers});
+    return this.httpClient.post(`${this.baseURL}/create`, reservationData, {headers});
   }
 
-  getEmployeeById(id: number): Observable<Reservation>{
+  getReservationById(id: number): Observable<Reservation>{
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
     return this.httpClient.get<Reservation>(`${this.baseURL}/${id}`, {headers});
   }
 
-  updateReservation(id: number, reservation: Reservation): Observable<Object>{
+  updateReservation(id: number): Observable<Object>{
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
-    return this.httpClient.put(`${this.baseURL}/${id}`, reservation, {headers});
+    return this.httpClient.put(`${this.baseURL}/update/${id}`, {headers});
   }
 
   deleteReservation(id: number): Observable<Object>{
     const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
-    return this.httpClient.delete(`${this.baseURL}/${id}`, {headers});
+    return this.httpClient.delete(`${this.baseURL}/delete/${id}`, {headers});
   }
 }
