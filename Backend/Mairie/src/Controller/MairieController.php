@@ -36,7 +36,7 @@ class MairieController extends AbstractController
 
     // Route pour supprimer une mairie par son id
     #[Route('/api/mairies/delete/{id}', name: 'deleteMairie', methods: ['DELETE'])]
-    public function deleteMairie(Mairie $mairie, EntityManagerInterface $delete): JsonResponse
+    public function deleteMairie(int $id,Mairie $mairie, EntityManagerInterface $delete): JsonResponse
     {
         $delete->remove($mairie);
         $delete->flush();

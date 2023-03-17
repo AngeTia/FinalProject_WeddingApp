@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Reservation } from '../models/reservation.models';
 import { Observable } from 'rxjs';
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ReservationService {
 
-  baseURL = "http://localhost:8000/api/reservation";
+  private baseURL = "http://localhost:8000/api/reservations";
 
   constructor(private httpClient: HttpClient) { }
 
