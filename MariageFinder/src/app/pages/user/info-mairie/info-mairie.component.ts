@@ -27,15 +27,5 @@ export class InfoMairieComponent implements OnInit {
   mairieDetails(id: number){
     this.router.navigate(['MairieId', id]);
   }
-
-  updateMairie(id: number){
-    this.router.navigate(['updateMairie', id]);
-  }
-
-  deleteMairie(id: number){
-    this.mairieService.deleteMairie(id).subscribe( data => {
-      console.log(data);
-      this.getMairie();
-    })
-  }
+  
 }

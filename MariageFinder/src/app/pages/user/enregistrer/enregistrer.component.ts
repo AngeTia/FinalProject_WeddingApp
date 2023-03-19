@@ -20,20 +20,37 @@ export class EnregistrerComponent {
 
     // Init form
     this.formRegister = this.fb.group({
-      nom: [''],
-      prenom: [''],
+      nomEpoux: ['', [ Validators.required]],
+      prenomEpoux: ['', [ Validators.required]],
+      nomEpouse: ['', [ Validators.required]],
+      prenomEpouse: ['', [ Validators.required]],
       contact: ['', [ Validators.required] ],
+      dateReservation: ['', [ Validators.required]],
+      dateMariage: ['', [ Validators.required]],
+      filename: [null],
+      path: [null],
+      originalFilename: [null],
+      file: [null],
+      reservationStatus: [false],
+      mairie: [null]
     });
   }
 
   submitForm() {
     let data = {
-      date: "iivii",
-      time: "iviuviuvuivu",
-      payementStatus: false,
-      payementDate: "iivyi",
-      mairie: null,
-      CheckFolder: [],
+        nomEpoux: "",
+        prenomEpoux: "",
+        nomEpouse: "",
+        prenomEpouse: "",
+        contact: "",
+        dateReservation: "",
+        dateMariage: "",
+        filename: null,
+        path: null,
+        originalFilename: null,
+        file: null,
+        reservationStatus: false,
+        mairie: null,
 
       ...this.formRegister.value
     };
