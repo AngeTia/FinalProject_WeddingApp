@@ -26,7 +26,7 @@ class UtilisateurController extends AbstractController
     }
 
     // Route pour créer un User
-    #[Route('/api/users/create', name: 'app_utilisateur', methods: ["POST"])]
+    #[Route('/api/users/create', name: 'createUser', methods: ["POST"])]
     public function index(Request $request): JsonResponse
     {
 
