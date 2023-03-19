@@ -16,13 +16,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let reservation of reservations">
-      <td>{{ reservation.nom }}</td>
-      <td>{{ reservation.prenom }}</td>
+      <td>{{ reservation.nomEpoux }}</td>
+      <td>{{ reservation.prenomEpoux }}</td>
+      <td>{{ reservation.nomEpouse}}</td>
+      <td>{{ reservation.prenomEpouse }}</td>
       <td>{{ reservation.contact }}</td>
       <td>{{ reservation.date }}</td>
-      <td>{{ reservation.time }}</td>
-      <td>{{ reservation.payement_status }}</td>
-      <td>{{ reservation.payement_date }}</td>
+      <td>{{ reservation.reservations_status }}</td>
       <td>
         <button (click)="updateReservation(reservation.id)" class="btn btn-primary">Update</button>
         <button (click)="deleteReservation(reservation.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>

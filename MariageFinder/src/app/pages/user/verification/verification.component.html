@@ -1,6 +1,7 @@
 
         <div>
             <h1>Vérification du suivis de la réservation</h1>
+            <!-- Permet d'appeler une fonction après renseignement de la reference du reçu pour recuperer les informations correspondante -->
                 <form (ngSubmit)="onSubmit()" #mairieForm="ngForm">
                   <div class="form-row">
                     <div class="form-group form-row col-md-12">
@@ -10,7 +11,7 @@
                 </div>
                   <div class="form-row">
                     <div class="col-md-12">
-                      <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/info">
+                      <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/">
                         <i class="fas fa-search"></i>
                       </button>
                       <button type="reset" class="btn btn-secondary">

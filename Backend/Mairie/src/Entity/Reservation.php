@@ -3,8 +3,9 @@
 namespace App\Entity;
 
 use App\Repository\ReservationRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
@@ -16,62 +17,94 @@ class Reservation
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $nom = null;
+    private ?string $nom_epoux = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $prenom = null;
+    private ?string $prenom_epoux = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $nom_epouse = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $prenom_epouse = null;
 
     #[ORM\Column(length: 255)]
     private ?string $contact = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $date = null;
+    // #[ORM\Column(length: 255)]
+    // private ?string $date = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $time = null;
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $date_reservation = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $date_mariage = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?string $filename = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?string $path = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?string $originalFilename = null;
+
+    private ?File $file = null;
 
     #[ORM\Column]
-    private ?bool $payement_status = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $payement_date = null;
+    private ?bool $reservation_status = null;
 
     #[ORM\ManyToOne(inversedBy: 'Reservation')]
     private ?Mairie $mairie = null;
-
-    #[ORM\OneToMany(mappedBy: 'reservation', targetEntity: CheckFolder::class)]
-    private Collection $CheckFolder;
-
-    public function __construct()
-    {
-        $this->CheckFolder = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getNomEpoux(): ?string
     {
-        return $this->nom;
+        return $this->nom_epoux;
     }
 
-    public function setNom(string $nom): self
+    public function setNomEpoux(string $nom_epoux): self
     {
-        $this->nom = $nom;
+        $this->nom_epoux = $nom_epoux;
 
         return $this;
     }
 
-    public function getPrenom(): ?string
+    public function getPrenomEpoux(): ?string
     {
-        return $this->prenom;
+        return $this->prenom_epoux;
     }
 
-    public function setPrenom(string $prenom): self
+    public function setPrenomEpoux(string $prenom_epoux): self
     {
-        $this->prenom = $prenom;
+        $this->prenom_epoux = $prenom_epoux;
+
+        return $this;
+    }
+    public function getNomEpouse(): ?string
+    {
+        return $this->nom_epouse;
+    }
+
+    public function setNomEpouse(string $nom_epouse): self
+    {
+        $this->nom_epouse = $nom_epouse;
+
+        return $this;
+    }
+
+    public function getPrenomEpouse(): ?string
+    {
+        return $this->prenom_epouse;
+    }
+
+    public function setPrenomEpouse(string $prenom_epouse): self
+    {
+        $this->prenom_epouse = $prenom_epouse;
 
         return $this;
     }
@@ -88,50 +121,88 @@ class Reservation
         return $this;
     }
 
-    public function getDate(): ?string
+    public function getDateReservation(): ?\DateTimeInterface
     {
-        return $this->date;
+        return $this->date_reservation;
     }
 
-    public function setDate(string $date): self
+    public function setDateReservation(\DateTimeInterface $date_reservation): self
     {
-        $this->date = $date;
+        $this->date_reservation = $date_reservation;
 
         return $this;
     }
 
-    public function getTime(): ?string
+    public function getDateMariage(): ?\DateTimeInterface
     {
-        return $this->time;
+        return $this->date_mariage;
     }
 
-    public function setTime(string $time): self
+    public function setDateMariage(\DateTimeInterface $date_mariage): self
     {
-        $this->time = $time;
+        $this->date_mariage = $date_mariage;
 
         return $this;
     }
 
-    public function isPayementStatus(): ?bool
+    public function getFilename(): ?string
     {
-        return $this->payement_status;
+        return $this->filename;
     }
 
-    public function setPayementStatus(bool $payement_status): self
+    public function setFilename(?string $filename): self
     {
-        $this->payement_status = $payement_status;
+        $this->filename = $filename;
 
         return $this;
     }
 
-    public function getPayementDate(): ?string
+    public function getPath(): ?string
     {
-        return $this->payement_date;
+        return $this->path;
     }
 
-    public function setPayementDate(string $payement_date): self
+    public function setPath(?string $path): self
     {
-        $this->payement_date = $payement_date;
+        $this->path = $path;
+
+        return $this;
+    }
+
+    public function getOriginalFilename(): ?string
+    {
+        return $this->originalFilename;
+    }
+
+    public function setOriginalFilename(?string $originalFilename): self
+    {
+        $this->originalFilename = $originalFilename;
+
+        return $this;
+    }
+
+    public function getFile(): ?File
+    {
+        return $this->file;
+    }
+
+    public function setFile(?File $file): self
+    {
+        $this->file = $file;
+        if ($file instanceof UploadedFile) {
+            $this->setOriginalFilename($file->getClientOriginalName());
+        }
+        return $this;
+    }
+
+    public function isReservationStatus(): ?bool
+    {
+        return $this->reservation_status;
+    }
+
+    public function setReservationStatus(bool $reservation_status): self
+    {
+        $this->reservation_status = $reservation_status;
 
         return $this;
     }
@@ -146,37 +217,5 @@ class Reservation
         $this->mairie = $mairie;
 
         return $this;
-    }
-
-    /**
-     * @return Collection<int, CheckFolder>
-     */
-    public function getCheckFolder(): Collection
-    {
-        return $this->CheckFolder;
-    }
-
-    public function addCheckFolder(CheckFolder $checkFolder): self
-    {
-        if (!$this->CheckFolder->contains($checkFolder)) {
-            $this->CheckFolder->add($checkFolder);
-            $checkFolder->setReservation($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCheckFolder(CheckFolder $checkFolder): self
-    {
-        if ($this->CheckFolder->removeElement($checkFolder)) {
-            // set the owning side to null (unless already changed)
-            if ($checkFolder->getReservation() === $this) {
-                $checkFolder->setReservation(null);
-            }
-        }
-
-        return $this;
-    }
-
-    
+    }  
 }

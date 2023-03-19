@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PlanningRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: PlanningRepository::class)]
 class Planning
@@ -13,11 +14,11 @@ class Planning
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column]
-    private ?int $reservation_number = null;
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $disponible = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $day = null;
+    #[ORM\Column(type: Types::TIME_MUTABLE)]
+    private ?\DateTimeInterface $heure = null;
 
     #[ORM\ManyToOne(inversedBy: 'Planning')]
     private ?Mairie $mairie = null;
@@ -27,26 +28,26 @@ class Planning
         return $this->id;
     }
 
-    public function getReservationNumber(): ?int
+    public function getDisponible(): ?\DateTimeInterface
     {
-        return $this->reservation_number;
+        return $this->disponible;
     }
 
-    public function setReservationNumber(int $reservation_number): self
+    public function setDisponible(\DateTimeInterface $disponibilite): self
     {
-        $this->reservation_number = $reservation_number;
+        $this->disponible = $disponibilite;
 
         return $this;
     }
 
-    public function getDay(): ?string
+    public function getHeure(): ?\DateTimeInterface
     {
-        return $this->day;
+        return $this->heure;
     }
 
-    public function setDay(string $day): self
+    public function setHeure(\DateTimeInterface $heure): self
     {
-        $this->day = $day;
+        $this->heure = $heure;
 
         return $this;
     }

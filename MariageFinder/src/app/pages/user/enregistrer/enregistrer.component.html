@@ -1,49 +1,69 @@
 <main>
-  <h2>Nouveau compte </h2>
-<!-- content -->
-<div class="register-area">
+  <h2>Nouveau compte</h2>
+  <div class="register-area">
     <div class="container">
-
-        <div class="col-md-12">
-            <div class="box-for overflow">
-                <div class="col-md-12 col-xs-12 register-blocks">
-                    <form [formGroup]="formRegister" #ngForm="ngForm" (ngSubmit)="submitForm()">
-                        <!-- fields nom et prenom -->
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="nom">Nom </label>
-                                    <input formControlName="nom" type="text" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="prenom">Prenom</label>
-                                    <input formControlName="prenom" type="text" class="form-control">
-                                </div>
-                            </div>
-                            <!-- <div class="col-sm-6">
-                              <div class="form-group">
-                                  <label for="contact">Email</label>
-                                  <input formControlName="prenom" type="text" class="form-control" required>
-                              </div>
-                          </div> -->
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="contact">Contact</label>
-                                <input formControlName="contact" type="text" class="form-control" required>
-                            </div>
-                        </div>
-                        </div>
-                        <br>
-
-                        <div class="col-sm-12 text-center">
-                            <button class="btn btn-primary" > Enregistrer </button>
-                        </div>
-                    </form>
+      <div class="col-md-12">
+        <div class="box-for overflow">
+          <div class="col-md-12 col-xs-12 register-blocks">
+            <form [formGroup]="formRegister" #ngForm="ngForm" (ngSubmit)="submitForm()">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="nomEpoux">Nom Epoux</label>
+                    <input formControlName="nomEpoux" type="text" class="form-control" required required="obliger">
+                  </div>
                 </div>
-            </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="prenomEpoux">Prenom Epoux</label>
+                    <input formControlName="prenomEpoux" type="text" class="form-control required" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="nomEpouse">Nom Epouse</label>
+                    <input formControlName="nomEpouse" type="text" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="prenomEpouse">Prenom Epouse</label>
+                    <input formControlName="prenomEpouse" type="text" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input formControlName="contact" type="text" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="dateReservation">date Reservation</label>
+                    <input formControlName="dateReservation" type="date" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="dateMariage">date Mariage</label>
+                    <input formControlName="dateMariage" type="date" class="form-control" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="filename">Nom du fichier</label>
+                    <input type="file" name="filename" accept=".pdf,.doc,.docx" class="form-control-file">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="col-sm-12 text-center">
+                <button class="btn btn-primary">Enregistrer</button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </main>
