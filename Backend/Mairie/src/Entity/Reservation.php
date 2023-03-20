@@ -31,9 +31,6 @@ class Reservation
     #[ORM\Column(length: 255)]
     private ?string $contact = null;
 
-    // #[ORM\Column(length: 255)]
-    // private ?string $date = null;
-
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_reservation = null;
 
