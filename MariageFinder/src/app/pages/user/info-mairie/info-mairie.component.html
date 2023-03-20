@@ -1,25 +1,38 @@
+<h2>Recherchez votre Mairie</h2>
+<div class="container">
+      <div class="form-row align-items-center">
+        </div>
+          <div class="form-row">
+            <div class="form-group form-row col-md-12">
+              <input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="Entrez le nom de la commune" (keyup)="filterMairie()">
+            </div>
+            </div>
+</div>
+<br>
 
-  <h2> Liste des mairies</h2>
-
-<table class = "table table-striped table-bordered">
+<table class="table table-striped table-bordered">
   <thead>
-      <tr>
-          <th> Nom</th>
-          <th> Addresse </th>
-          <th> Phone</th>
-          <th> Email </th>
-      </tr>
+    <tr>
+      <th>Nom</th>
+      <th>Addresse</th>
+      <th>Téléphone</th>
+      <th>Email</th>
+      <th>Detail sur la Mairie</th>
+      <th>Réservation</th>
+    </tr>
   </thead>
   <tbody>
-      <tr *ngFor = "let mairie of mairie" >
-          <td> {{ mairie.nom }} </td>
-          <td> {{ mairie.addresse }} </td>
-          <td> {{ mairie.phone }} </td>
-          <td> {{ mairie.email }} </td>
-          <td>
-              <button class = "btn btn-primary" style="margin-left: 10px" routerLink="/enregistrer"> Enregistrer Vous!</button>
-          </td>
-
-      </tr>
+    <tr *ngFor="let mairie of filteredMairie">
+      <td>{{mairie.nom}}</td>
+      <td>{{mairie.addresse}}</td>
+      <td>{{mairie.phone}}</td>
+      <td>{{mairie.email}}</td>
+      <td>
+        <button class="btn btn-primary" style="margin-left: 10px" (click)="mairieDetails(mairie.id)">Détails</button>
+      </td>
+      <td>
+        <button class="btn btn-danger" style="margin-left: 10px" (click)="reservationSave(mairie)">Réservation</button>
+      </td>
+    </tr>
   </tbody>
 </table>
