@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ReservationService } from '../../../services/reservation.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ReservationDataService } from 'src/app/services/reservation-data.service';
+import { Mairie } from '../../../models/mairie.models';
 
 
 @Component({
@@ -14,9 +16,20 @@ export class EnregistrerComponent {
   // notification empty
   isOk = -1;
 
-  constructor(private svcApi: ReservationService, private fb: FormBuilder, private router: Router) { }
+  mairieGet!:Mairie;
+
+  constructor(private svcApi: ReservationService, private fb: FormBuilder,
+    private router: Router,
+    private reservationDataSerice :ReservationDataService
+    ) { }
 
   ngOnInit(): void {
+
+    this.mairieGet=this.reservationDataSerice.get();
+    console.log(this.mairieGet);
+    console.log(this.mairieGet.nom);
+
+
 
     // Init form
     this.formRegister = this.fb.group({

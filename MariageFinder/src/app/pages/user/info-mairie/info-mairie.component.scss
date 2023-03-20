@@ -3,3 +3,13 @@ h2{
   font-size: 60px;
   margin: 50px;
 }
+input[type="text"] {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
