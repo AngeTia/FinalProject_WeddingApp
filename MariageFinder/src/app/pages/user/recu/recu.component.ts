@@ -6,14 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./recu.component.scss']
 })
 export class RecuComponent {
-   data!: any
+  data!: any
   constructor() { }
 
   ngOnInit(): void {
-    this.data=localStorage.getItem('reservation');
+    this.data=JSON.parse(localStorage.getItem('reservation') as string);
     console.log(this.data);
     // Pour supprimer la reservation en localStorage
-    // localStorage.removeItem('reservation');
+    localStorage.removeItem('reservation');
+  }
+  // la methode printPage() permet d'imprimer la page
+  printPage() {
+    window.print();
   }
 
 }

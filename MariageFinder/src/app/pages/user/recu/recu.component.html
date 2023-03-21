@@ -1,2 +1,26 @@
-
-  <h1>{{data.nomEpoux}}</h1>
+	<div class="container text-center">
+		<h1>Reçu de Réservation</h1>
+		<div class="info">
+			<h2>ID de la mairie :</h2>
+			<p>{{this.data.mairie}}</p>
+		</div>
+    <div class="info">
+			<h2>Information Époux :</h2>
+			<p>{{data.nomEpoux}} {{data.prenomEpoux}}</p>
+		</div>
+		<div class="info">
+			<h2>Information Épouse :</h2>
+			<p>{{data.nomEpouse}} {{data.prenomEpouse}}</p>
+		</div>
+		<div class="info">
+			<h2>Contact :</h2>
+			<p>{{data.contact}}</p>
+		</div>
+		<div class="info">
+			<h2>Date de mariage :</h2>
+			<p>{{data.dateMariage}}</p>
+		</div>
+	</div>
+  <div class="col-sm-12 text-center">
+    <button class="btn btn-primary" (click)="printPage()">Imprimer</button>
+  </div>
