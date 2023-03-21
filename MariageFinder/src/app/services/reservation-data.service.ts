@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { Mairie } from '../models/mairie.models';
 @Injectable({

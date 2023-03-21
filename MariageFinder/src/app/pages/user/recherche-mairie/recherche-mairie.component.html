@@ -1,25 +1,24 @@
-<div class="container">
-  <h1>Recherche la Mairie</h1>
-    <form (ngSubmit)="onSubmit()" #mairieForm="ngForm">
-      <div class="form-row align-items-center">
-        </div>
-          <div class="form-row">
-            <div class="form-group form-row col-md-12">
-              <label for="nom">Nom de la mairie :</label>
-              <input type="text" class="form-control" id="nom" [(ngModel)]="nom" name="nom" required>
-              <!-- <label for="nom">Entrez le mois:</label>
-              <input class="form-control" id="mois" [(ngModel)]="mois" name="mois" required> -->
-            </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/info">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button type="reset" class="btn btn-secondary">
-                  <i class="fas fa-trash"></i>
-                </button>
-                </div>
-            </div>
-    </form>
+<br>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Addresse</th>
+      <th>Téléphone</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td>{{this.mairieGet.nom}}</td>
+      <td>{{this.mairieGet.addresse}}</td>
+      <td>{{this.mairieGet.phone}}</td>
+      <td>{{this.mairieGet.email}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="col-sm-12 text-center">
+  <div class="form-group">
+    <img class="text-center" src="{{this.mairieGet.picture}}" alt="">
+  </div>
 </div>

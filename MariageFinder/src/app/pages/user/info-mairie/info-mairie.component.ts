@@ -17,7 +17,7 @@ export class InfoMairieComponent implements OnInit {
 
   constructor(private mairieService: MairieService,
     private router: Router,
-    private reservationDataSerice :ReservationDataService
+    private reservationDataService :ReservationDataService
     ) { }
 
   ngOnInit(): void {
@@ -31,8 +31,14 @@ export class InfoMairieComponent implements OnInit {
     });
   }
 
-  mairieDetails(id: number){
-    this.router.navigate(['MairieId', id]);
+  mairieDetails(mairie: Mairie) {
+    this.reservationDataService.set(mairie);
+    this.router.navigate(['/mairiedetails']);
+  }
+
+  reservationSave(mairie: Mairie) {
+    this.reservationDataService.set(mairie);
+    this.router.navigate(['/enregistrer']);
   }
 
 
@@ -45,8 +51,4 @@ export class InfoMairieComponent implements OnInit {
     );
   }
 
-  reservationSave(mairie: Mairie) {
-    this.reservationDataSerice.set(mairie);
-    this.router.navigate(['/enregistrer']);
-  }
 }

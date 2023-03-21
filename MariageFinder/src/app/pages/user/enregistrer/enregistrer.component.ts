@@ -72,6 +72,7 @@ export class EnregistrerComponent {
       // request create
       this.svcApi.createReservation(data).subscribe(
         (response: any) => {
+          localStorage.setItem('reservation', JSON.stringify(data));
           // if created = 1 or If error error = 0
           this.isOk = response.code == 200 ? 1 : 0;
           this.router.navigate(['/recu']);

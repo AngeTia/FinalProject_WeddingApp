@@ -1,1 +1,23 @@
-<p>reclamation works!</p>
+
+<div>
+  <h1>Réclamation</h1>
+  <!-- Permet d'appeler une fonction après renseignement de la reference du reçu pour recuperer les informations correspondante -->
+      <form  #mairieForm="ngForm">
+        <div class="form-row">
+          <div class="form-group form-row col-md-12">
+            <label for="nom">Veuillez entrer la référence de votre récu :</label>
+            <input type="text" class="form-control" id="identifiant" name="identifiant" required>
+          </div>
+      </div>
+        <div class="form-row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-primary" [disabled]="!mairieForm.form.valid" routerLink="/">
+              <i class="fas fa-search"></i>
+            </button>
+            <button type="reset" class="btn btn-secondary">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+      </div>
+      </form>
+</div>

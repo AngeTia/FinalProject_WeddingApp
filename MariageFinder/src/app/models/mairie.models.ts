@@ -4,4 +4,5 @@ export interface Mairie {
   addresse: string;
   phone: string;
   email: string;
+  picture: string;
 }

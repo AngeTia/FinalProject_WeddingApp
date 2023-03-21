@@ -36,6 +36,9 @@ class Mairie
     #[ORM\OneToMany(mappedBy: 'mairie', targetEntity: Utilisateur::class)]
     private Collection $Utilisateur;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $picture = null;
+
     public function __construct()
     {
         $this->Planning = new ArrayCollection();
@@ -185,5 +188,17 @@ class Mairie
 
     //     return $this;
     // }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
 
 }
