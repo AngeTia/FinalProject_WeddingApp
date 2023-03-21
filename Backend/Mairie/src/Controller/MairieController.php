@@ -20,7 +20,7 @@ class MairieController extends AbstractController
     {
         $mairies = $mairieRepository->findAll();
         
-        $mairiesJson = $serializer->serialize($mairies, 'json');
+        $mairiesJson = $serializer->serialize($mairies, 'json', ['groups' => 'show_reservation']);
         return new JsonResponse($mairiesJson, Response::HTTP_OK, [], true);
     }
 

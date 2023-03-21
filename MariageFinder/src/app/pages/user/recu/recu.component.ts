@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./recu.component.scss']
 })
 export class RecuComponent {
-   data: any
+   data!: any
   constructor() { }
 
   ngOnInit(): void {
