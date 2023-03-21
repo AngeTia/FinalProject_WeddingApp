@@ -8,6 +8,9 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MairieService {
+  set(mairie: Mairie) {
+    throw new Error('Method not implemented.');
+  }
 
   private readonly baseURL: string = 'http://localhost:8000/api/mairies';
 

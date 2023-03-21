@@ -1,13 +1,16 @@
 export interface Reservation {
   id: number;
-  mairie_id: number;
   nomEpoux: string;
   prenomEpoux: string;
   nomEpouse: string;
   prenomEpouse: string;
   contact: string;
-  date: string;
-  time: string;
+  dateReservation: string;
+  dateMariage: string;
+  filename: string;
+  path: string;
+  originalFilename: string;
+  file: string;
   reservations_status: boolean;
-  payement_date: number;
+  mairie: number;
 }

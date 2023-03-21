@@ -1,12 +1,18 @@
-<main>
-  <h2>{{ this.mairieGet.nom }}</h2>
+<main class="text-center">
   <div class="register-area">
     <div class="container">
       <div class="col-md-12">
-        <div class="box-for overflow">
-          <div class="col-md-12 col-xs-12 register-blocks">
+        <div class="box-for overflow text-center">
+          <div class="col-md-12 col-xs-12 register-blocks text-center">
             <form [formGroup]="formRegister" #ngForm="ngForm" (ngSubmit)="submitForm()">
+              <div class="col-sm-12 text-center">
+              </div>
               <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <h2 for="mairie_id">{{ this.mairieGet.nom }}</h2>
+                  </div>
+                </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="nomEpoux">Nom Epoux</label>
@@ -51,10 +57,16 @@
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label for="filename">Nom du fichier</label>
-                    <input type="file" name="filename" accept=".pdf,.doc,.docx" class="form-control-file">
+                    <label for="path">Extraire de Naissance Epoux</label>
+                    <input type="file" name="path" accept=".pdf" class="form-control-file">
                   </div>
                 </div>
+                <!-- <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="path">Extraire de Naissance Epouse</label>
+                    <input type="file" name="path" accept=".pdf" class="form-control-file">
+                  </div>
+                </div> -->
               </div>
               <br>
               <div class="col-sm-12 text-center">

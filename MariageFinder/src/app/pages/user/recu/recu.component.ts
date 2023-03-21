@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./recu.component.scss']
 })
 export class RecuComponent {
+   data: any
+  constructor() { }
+
+  ngOnInit(): void {
+    this.data=localStorage.getItem('reservation');
+    console.log(this.data);
+    // Pour supprimer la reservation en localStorage
+    // localStorage.removeItem('reservation');
+  }
 
 }

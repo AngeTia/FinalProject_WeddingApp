@@ -14,8 +14,8 @@ import { EnregistrerComponent } from './pages/user/enregistrer/enregistrer.compo
 const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'accueil', component: AccueilComponent },
-  { path: 'recherche', component: RechercheMairieComponent },
-  { path: 'info', component: InfoMairieComponent },
+  { path: 'mairiedetails', component: RechercheMairieComponent },
+  { path: 'recherche', component: InfoMairieComponent },
   { path: 'reservation', component: ReservationComponent },
   { path: 'paiement', component: PaiementComponent },
   { path: 'recu', component: RecuComponent },
@@ -24,7 +24,6 @@ const routes: Routes = [
   { path: 'enregistrer', component: EnregistrerComponent},
   { path: 'recu', component: RecuComponent},
   { path: '', redirectTo: '/accueil', pathMatch: 'full' },
-
 
 ];
 
