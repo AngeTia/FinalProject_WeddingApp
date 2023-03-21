@@ -38,14 +38,14 @@ export class EnregistrerComponent {
       nomEpouse: ['', [ Validators.required]],
       prenomEpouse: ['', [ Validators.required]],
       contact: ['', [ Validators.required] ],
-      dateReservation: ['', [ Validators.required]],
+      // dateReservation: ['', [ Validators.required]],
       dateMariage: ['', [ Validators.required]],
       filename: [null],
       path: [null],
       originalFilename: [null],
       file: [null],
       reservationStatus: [false],
-      mairie: [null]
+      mairie: [this.mairieGet.id]
     });
   }
 
@@ -56,14 +56,14 @@ export class EnregistrerComponent {
         nomEpouse: "",
         prenomEpouse: "",
         contact: "",
-        dateReservation: "",
+        // dateReservation: "",
         dateMariage: "",
         filename: null,
         path: null,
         originalFilename: null,
         file: null,
         reservationStatus: false,
-        mairie: null,
+        mairie: this.mairieGet.id,
 
       ...this.formRegister.value
     };

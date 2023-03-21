@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Reservation;
+use App\Repository\MairieRepository;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -35,14 +36,37 @@ class ReservationController extends AbstractController
 
     // Route pour ajouter un Reservation
     #[Route('/api/reservations/create', name: 'addReservation', methods: ['POST'])]
-    public function addReservation(Request $request, EntityManagerInterface $add, SerializerInterface $serializer): JsonResponse
+    public function addReservation(MairieRepository $mairieRepository, Request $request, EntityManagerInterface $add, SerializerInterface $serializer): JsonResponse
     {
-        $newReservation = $serializer->deserialize($request->getContent(), Reservation::class, 'json');
+
+        $requestdata = json_decode($request->getContent(), true);
+        // dd(json_decode($request->getContent(), true));
+        $newReservation = new Reservation();
+        $newReservation->setNomEpoux($requestdata['nomEpoux']);
+        $newReservation->setPrenomEpoux($requestdata['prenomEpoux']);
+        $newReservation->setNomEpouse($requestdata['nomEpouse']);
+        $newReservation->setPrenomEpouse($requestdata['prenomEpouse']);
+        $newReservation->setContact($requestdata['contact']);
+        $newReservation->setDateReservation(new \DateTime());
+        $newReservation->setDateMariage(new \DateTime($requestdata['dateMariage']));
+        $newReservation->setReservationStatus($requestdata['reservationStatus']);
+
+        $mairie = $mairieRepository->findOneBy(['id' => $requestdata['mairie']]);
+        $newReservation->setMairie($mairie);
+
         $add->persist($newReservation);
         $add->flush();
 
-        $jsonReservation = $serializer->serialize($newReservation, 'json');
-        return new JsonResponse($jsonReservation, Response::HTTP_CREATED, [], true);
+
+        // $newReservation = $serializer->deserialize($request->getContent(), Reservation::class, 'json');
+        // $add->persist($newReservation);
+        // $add->flush();
+
+        // $jsonReservation = $serializer->serialize($newReservation, 'json');
+        return $this->json([
+            'code' => 200,
+        ], 200, [], []
+    );
     }
     
     // Route pour modifier un Reservation par son id

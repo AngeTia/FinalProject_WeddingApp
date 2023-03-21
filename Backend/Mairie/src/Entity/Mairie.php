@@ -6,25 +6,31 @@ use App\Repository\MairieRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: MairieRepository::class)]
 class Mairie
 {
+    #[Groups(['show_reservation'])]
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['show_reservation'])]
     private ?string $nom = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['show_reservation'])]
     private ?string $addresse = null;
 
     #[ORM\Column(length: 20)]
+    #[Groups(['show_reservation'])]
     private ?string $phone = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['show_reservation'])]
     private ?string $email = null;
 
     #[ORM\OneToMany(mappedBy: 'mairie', targetEntity: Planning::class)]
@@ -37,6 +43,7 @@ class Mairie
     private Collection $Utilisateur;
 
     #[ORM\Column(length: 255, nullable: true)]
+    #[Groups(['show_reservation'])]
     private ?string $picture = null;
 
     public function __construct()

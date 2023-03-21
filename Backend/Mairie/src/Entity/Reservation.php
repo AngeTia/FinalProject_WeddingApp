@@ -75,7 +75,7 @@ class Reservation
     {
         return $this->prenom_epoux;
     }
-    
+
     public function setPrenomEpoux(string $prenom_epoux): self
     {
         $this->prenom_epoux = $prenom_epoux;
