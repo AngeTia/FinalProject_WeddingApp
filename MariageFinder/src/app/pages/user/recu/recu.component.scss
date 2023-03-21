@@ -1,10 +1,38 @@
-main {
-  // background-image: url("https://media.istockphoto.com/id/1388562262/photo/beautiful-bride-and-groom-during-an-outdoors-wedding-ceremony-on-an-ocean-beach-at-sunset.jpg?s=612x612&w=0&k=20&c=kXRqwoiTbIklo_PHSsFdGXELv1_blhmuNpKdwqLaf04=");
-  // background-color: #f5f5f5;
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #ada8a8;
+		}
+		.container {
+			max-width: 800px;
+			margin: 15px auto;
+			padding: 20px;
+			background-color: #3892d6;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		h1 {
+      color: white !important;
+			font-size: 24px;
+			margin: 0 0 10px;
+		}
+		h2 {
+      color: white !important;
+			font-size: 20px;
+			margin: 0 0 5px;
+		}
+		.info {
+      color: white !important;
+			margin-bottom: 10px;
+		}
+
+    button{
+      background-color: #272727a2;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }

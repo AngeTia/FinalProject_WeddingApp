@@ -28,19 +28,15 @@ class ReservationController extends AbstractController
     #[Route('/api/reservations/{id}', name: 'ReservationId', methods: ['GET'])]
     public function getDetailReservation(Reservation $Reservations, ReservationRepository $ReservationsRepository, SerializerInterface $serializer): JsonResponse
     {   
-        // Code simplifié avec le param converter : vérifie si l'id existe et si oui, retourne la mairie
         $ReservationJson = $serializer->serialize($Reservations, 'json');
         return new JsonResponse($ReservationJson, Response::HTTP_OK, [], true);
-        
     }
 
     // Route pour ajouter un Reservation
     #[Route('/api/reservations/create', name: 'addReservation', methods: ['POST'])]
     public function addReservation(MairieRepository $mairieRepository, Request $request, EntityManagerInterface $add, SerializerInterface $serializer): JsonResponse
     {
-
         $requestdata = json_decode($request->getContent(), true);
-        // dd(json_decode($request->getContent(), true));
         $newReservation = new Reservation();
         $newReservation->setNomEpoux($requestdata['nomEpoux']);
         $newReservation->setPrenomEpoux($requestdata['prenomEpoux']);
@@ -57,12 +53,6 @@ class ReservationController extends AbstractController
         $add->persist($newReservation);
         $add->flush();
 
-
-        // $newReservation = $serializer->deserialize($request->getContent(), Reservation::class, 'json');
-        // $add->persist($newReservation);
-        // $add->flush();
-
-        // $jsonReservation = $serializer->serialize($newReservation, 'json');
         return $this->json([
             'code' => 200,
         ], 200, [], []

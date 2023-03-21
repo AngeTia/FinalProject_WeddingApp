@@ -24,12 +24,10 @@ export class EnregistrerComponent {
     ) { }
 
   ngOnInit(): void {
-
+    // permet de recuperer les données de la mairie
     this.mairieGet=this.reservationDataSerice.get();
     console.log(this.mairieGet);
     console.log(this.mairieGet.nom);
-
-
 
     // Init form
     this.formRegister = this.fb.group({
@@ -48,8 +46,9 @@ export class EnregistrerComponent {
       mairie: [this.mairieGet.id]
     });
   }
-
+  // la methode submitForm() permet de recuperer les données du formulaire
   submitForm() {
+    // table data qui contient les données du formulaire
     let data = {
         nomEpoux: "",
         prenomEpoux: "",
@@ -68,16 +67,17 @@ export class EnregistrerComponent {
       ...this.formRegister.value
     };
     console.log(data);
+
+    // permet de verifier si le formulaire est valide et de passe à la page suivante
     if (this.formRegister.valid) {
       // request create
       this.svcApi.createReservation(data).subscribe(
         (response: any) => {
           localStorage.setItem('reservation', JSON.stringify(data));
-          // if created = 1 or If error error = 0
           this.isOk = response.code == 200 ? 1 : 0;
           this.router.navigate(['/recu']);
           if (this.isOk) {
-            this.formRegister.reset(); // form.reset();
+            this.formRegister.reset();
           }
         },
         error => console.log(`Error ${error}`)

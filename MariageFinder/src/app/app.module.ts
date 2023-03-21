@@ -23,6 +23,9 @@ import { ContactComponent } from './pages/user/contact/contact.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { EnregistrerComponent } from './pages/user/enregistrer/enregistrer.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +45,7 @@ import { EnregistrerComponent } from './pages/user/enregistrer/enregistrer.compo
     NavbarComponent,
     ContactComponent,
     EnregistrerComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,7 @@ import { EnregistrerComponent } from './pages/user/enregistrer/enregistrer.compo
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgSelectModule
+    NgSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
