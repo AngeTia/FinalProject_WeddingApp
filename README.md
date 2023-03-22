@@ -24,29 +24,29 @@
 
 1. *Recherche de la mairie*
 
-> Cette fonctionnalité permet aux utilisateurs de rechercher la mairie où ils souhaitent se marier en entrant des critères de recherche tels que la ville, le code postal, le nom de la mairie ou l'adresse. Cette recherche peut aider les utilisateurs à trouver rapidement la mairie la plus proche de chez eux ou la plus adaptée à leurs besoins.
+> Cette fonctionnalité permet aux utilisateurs de rechercher la mairie où ils souhaitent se marier en entrant le nom de la commune . Cette recherche aide les utilisateurs à trouver rapidement la mairie désirée.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. *Affichage des informations relatives à la mairie*
 
-> Une fois que les utilisateurs ont trouvé la mairie qu'ils souhaitent, ils peuvent accéder à des informations supplémentaires telles que l'adresse de la mairie, le numéro de téléphone, les heures d'ouverture, les tarifs et les documents requis pour la réservation d'une date de mariage. Cette fonctionnalité peut aider les utilisateurs à obtenir toutes les informations nécessaires pour planifier leur mariage à la mairie.
+> Une fois que les utilisateurs ont trouvé la mairie qu'ils souhaitent, ils peuvent accéder à des informations supplémentaires telles que l'adresse de la mairie, le numéro de téléphone, les heures d'ouverture, les tarifs et les documents requis pour la réservation d'une date de mariage. Cette fonctionnalité permettra aux utilisateurs d'obtenir toutes les informations nécessaires pour planifier leur mariage.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 3. *Réservation d'une date de mariage*
 
-> Après avoir trouvé la mairie appropriée et vérifié les informations pertinentes, les utilisateurs peuvent procéder à la réservation de leur date de mariage en ligne. Cette fonctionnalité permet aux utilisateurs de sélectionner la date et l'heure de leur mariage, ainsi que de saisir toutes les informations requises pour la réservation.
+> Après avoir trouvé la mairie appropriée et vérifié les informations pertinentes, les utilisateurs peuvent procéder à la réservation de leur date de mariage en ligne. Cette fonctionnalité permet aux utilisateurs de sélectionner la date de leur mariage, ainsi que de saisir toutes les informations requises pour la réservation.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 4. *Paiement de la réservation*
 
-> Après avoir réservé la date de leur mariage, les utilisateurs peuvent effectuer le paiement en ligne pour finaliser leur réservation. Cette fonctionnalité permet aux utilisateurs de payer facilement et rapidement pour leur réservation de mariage, sans avoir à se déplacer en personne à la mairie.
+> Après avoir réservé la date de leur mariage et que les dossiers fournis ont été validé, les utilisateurs peuvent effectuer le paiement en ligne pour finaliser leur réservation. Cette fonctionnalité permet aux utilisateurs de payer facilement et rapidement pour leur réservation de mariage, sans avoir à se déplacer en personne à la mairie.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 5. *Impression du reçu de la réservation*
 
-> Enfin, les utilisateurs peuvent imprimer un reçu de leur réservation une fois le paiement effectué. Cette fonctionnalité permet aux utilisateurs de conserver une preuve écrite de leur réservation de mariage à la mairie, qu'ils peuvent conserver pour leurs dossiers personnels ou utiliser pour d'autres formalités.
+> Enfin, les utilisateurs peuvent imprimer un reçu de leur réservation. Cette fonctionnalité permet aux utilisateurs de conserver une preuve écrite de leur réservation de mariage à la mairie, qu'ils peuvent conserver pour leurs dossiers personnels ou utiliser pour d'autres formalités.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Les problématiques que peuvent résoudre mon application**
 
-1. Problématique de recherche : Les personnes qui cherchent une mairie pour leur mariage peuvent avoir du mal à trouver les informations dont elles ont besoin, surtout si elles ne connaissent pas bien la région. Votre application peut les aider en offrant une interface conviviale pour effectuer des recherches et trouver les mairies disponibles dans la région de leur choix.
+1. Problématique de recherche : Les personnes qui cherchent une mairie pour leur mariage peuvent avoir du mal à trouver les informations dont elles ont besoin, surtout si elles ne connaissent pas bien la région. Mon application peut les aider en offrant une interface conviviale pour effectuer des recherches et trouver les mairies disponibles dans la région de leur choix.
 
 2. Problématique d'information : Les personnes qui ont trouvé une mairie intéressante pour leur mariage peuvent avoir besoin de plus d'informations pour prendre une décision éclairée. Votre application peut leur fournir les informations nécessaires sur les différentes mairies, y compris les tarifs, les services proposés, les photos et les avis des clients précédents.
 
@@ -169,10 +169,10 @@
 **FrontEnd**
 
  > Structure des dossiers `OK`<br/>
- > Configurations des composants<br/>
- > Configurations des différentes pages<br/>
- > Configurations du models<br/>
- > Configurations des services<br/>
+ > Configurations des composants `OK`<br/>
+ > Configurations des différentes pages `OK`<br/>
+ > Configurations du models `OK`<br/>
+ > Configurations des services `OK`<br/>
  > etc ...
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
