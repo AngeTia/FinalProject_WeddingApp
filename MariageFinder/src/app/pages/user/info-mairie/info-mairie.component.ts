@@ -23,7 +23,7 @@ export class InfoMairieComponent implements OnInit {
   ngOnInit(): void {
     this.getMairie();
   }
-
+  
   private getMairie() {
     this.mairieService.getMairieList().subscribe(data => {
       this.mairie = data;
