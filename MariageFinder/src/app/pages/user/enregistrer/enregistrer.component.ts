@@ -29,7 +29,7 @@ export class EnregistrerComponent {
     console.log(this.mairieGet);
     console.log(this.mairieGet.nom);
 
-    // Init form
+    // permet de creer le formulaire
     this.formRegister = this.fb.group({
       nomEpoux: ['', [ Validators.required]],
       prenomEpoux: ['', [ Validators.required]],
@@ -50,25 +50,25 @@ export class EnregistrerComponent {
   submitForm() {
     // table data qui contient les données du formulaire
     let data = {
-        nomEpoux: "",
-        prenomEpoux: "",
-        nomEpouse: "",
-        prenomEpouse: "",
-        contact: "",
-        // dateReservation: "",
-        dateMariage: "",
-        filename: null,
-        path: null,
-        originalFilename: null,
-        file: null,
-        reservationStatus: false,
-        mairie: this.mairieGet.id,
-
+      nomEpoux: "",
+      prenomEpoux: "",
+      nomEpouse: "",
+      prenomEpouse: "",
+      contact: "",
+      // dateReservation: "",
+      dateMariage: "",
+      filename: null,
+      path: null,
+      originalFilename: null,
+      file: null,
+      reservationStatus: false,
+      mairie: this.mairieGet.id,
+      // Ajouter les données du formulaire dans la table data
       ...this.formRegister.value
     };
     console.log(data);
 
-    // permet de verifier si le formulaire est valide et de passe à la page suivante
+    // permet de verifier si le formulaire est valide et de passer à la page suivante
     if (this.formRegister.valid) {
       // request create
       this.svcApi.createReservation(data).subscribe(

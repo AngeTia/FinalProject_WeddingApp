@@ -1,3 +1,4 @@
+// Définit les données d'une mairie
 export interface Mairie {
   id: number;
   nom: string;

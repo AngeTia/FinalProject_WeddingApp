@@ -1,3 +1,4 @@
+// définit la structure des données d'une réservation
 export interface Reservation {
   id: number;
   nomEpoux: string;
