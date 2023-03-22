@@ -54,6 +54,12 @@ class Reservation
     #[ORM\ManyToOne(inversedBy: 'Reservation')]
     private ?Mairie $mairie = null;
 
+    // #[ORM\ManyToOne(inversedBy: 'Reservation')]
+    // private ?Recu $recu = null;
+
+    // #[ORM\ManyToOne(inversedBy: 'Reservation')]
+    // private ?Paiement $paiement = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -214,5 +220,29 @@ class Reservation
         $this->mairie = $mairie;
 
         return $this;
-    }  
+    }
+
+    // public function getRecu(): ?Recu
+    // {
+    //     return $this->recu;
+    // }
+
+    // public function setRecu(?Recu $recu): self
+    // {
+    //     $this->recu = $recu;
+
+    //     return $this;
+    // }
+
+    // public function getPaiement(): ?Paiement
+    // {
+    //     return $this->paiement;
+    // }
+
+    // public function setPaiement(?Paiement $paiement): self
+    // {
+    //     $this->paiement = $paiement;
+
+    //     return $this;
+    // }  
 }

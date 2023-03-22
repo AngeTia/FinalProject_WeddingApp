@@ -13,20 +13,20 @@
     <tr>
       <th>Nom</th>
       <!-- <th>Addresse</th> -->
-      <th>Téléphone</th>
+      <!-- <th>Téléphone</th>
       <th>Email</th>
       <th>Detail sur la Mairie</th>
-      <th>Réservation</th>
+      <th>Réservation</th> -->
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let mairie of filteredMairie">
+    <tr *ngFor="let mairie of filteredMairie" class="text-center">
       <td>{{mairie.nom}}</td>
       <!-- <td>{{mairie.addresse}}</td> -->
-      <td>{{mairie.phone}}</td>
-      <td>{{mairie.email}}</td>
+      <!-- <td>{{mairie.phone}}</td>
+      <td>{{mairie.email}}</td> -->
       <td>
-        <button class="btn btn-primary" style="margin-left: 10px" (click)="mairieDetails(mairie)">Détails</button>
+        <button class="btn btn-primary " style="margin-left: 10px" (click)="mairieDetails(mairie)">Détails</button>
       </td>
       <td>
         <button class="btn btn-danger" style="margin-left: 10px" (click)="reservationSave(mairie)">Réservation</button>
