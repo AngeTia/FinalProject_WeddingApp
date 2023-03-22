@@ -179,3 +179,13 @@
 **WorkFlow**
 
 > CodeQL Setup
+
+**Fonctionnalités futuristes et Suggestion des membres du Jury**
+
+> Ajout de Map pour permettre à l'tulisateur d'avoir la localistion en temps de réel de la mairie
+> Lister les documents nécessaires pour la reservation d'une date de mariage en fonction de la nationnalité de la nationnalité:  soit local et étrangère.
+> Mettre en place un système pour pouvoir monétiser l'application
+> Retoucher l'interface de l'application
+> Perfectionner le système d'impression de réçu et ajouter également le code QR
+> Prevoir des statisques pour chaque réservations et réclamations afin de l'envoyer à l'administrateur de la mairie concernée.
+
