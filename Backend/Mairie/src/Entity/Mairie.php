@@ -46,6 +46,12 @@ class Mairie
     #[Groups(['show_reservation'])]
     private ?string $picture = null;
 
+    // #[ORM\ManyToOne(inversedBy: 'Mairie')]
+    // private ?Recu $recu = null;
+
+    // #[ORM\ManyToOne(inversedBy: 'Mairie')]
+    // private ?Paiement $paiement = null;
+
     public function __construct()
     {
         $this->Planning = new ArrayCollection();
@@ -207,5 +213,29 @@ class Mairie
 
         return $this;
     }
+
+    // public function getRecu(): ?Recu
+    // {
+    //     return $this->recu;
+    // }
+
+    // public function setRecu(?Recu $recu): self
+    // {
+    //     $this->recu = $recu;
+
+    //     return $this;
+    // }
+
+    // public function getPaiement(): ?Paiement
+    // {
+    //     return $this->paiement;
+    // }
+
+    // public function setPaiement(?Paiement $paiement): self
+    // {
+    //     $this->paiement = $paiement;
+
+    //     return $this;
+    // }
 
 }
