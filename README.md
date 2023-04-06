@@ -1,4 +1,4 @@
-<img src="./MariageFinder/src/assets/img/acceuil.jpg" alt="Project Pictures" width="500" height="600">
+<img src="./MariageFinder/src/assets/img/WeddingDay.png" alt="Project Pictures" width="500" height="600">
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # AUTHOR INFORMATION:
 
